@@ -51,6 +51,7 @@ public class CalculadoraBasica extends javax.swing.JFrame {
         Etiqueta1 = new javax.swing.JLabel();
         Etiqueta2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -203,6 +204,9 @@ public class CalculadoraBasica extends javax.swing.JFrame {
         jLabel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 0, 190, 230));
 
+        jLabel2.setText("Michael GM 201810010296");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 204, 160, 20));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -300,6 +304,10 @@ public class CalculadoraBasica extends javax.swing.JFrame {
 
     private void resultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resultadoActionPerformed
         // TODO add your handling code here:
+        if (!Etiqueta3.getText().equals("")|(contador != 0)){
+            operaciones();
+            Etiqueta2.setText("");
+        }
         
     }//GEN-LAST:event_resultadoActionPerformed
 
@@ -339,7 +347,7 @@ public class CalculadoraBasica extends javax.swing.JFrame {
             if (Etiqueta2.getText().equals(("+"))){
                 numero2 = String.valueOf(n1+n2);
             }
-            if (Etiqueta2.getText().equals(("*"))){
+            if (Etiqueta2.getText().equals(("x"))){
                 numero2 = String.valueOf(n1*n2);
             }
             if (Etiqueta2.getText().equals(("/"))){
@@ -405,6 +413,7 @@ public class CalculadoraBasica extends javax.swing.JFrame {
     private javax.swing.JButton Punto;
     private javax.swing.JButton div;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JButton mul;
     private javax.swing.JButton resta;
     private javax.swing.JButton resultado;
