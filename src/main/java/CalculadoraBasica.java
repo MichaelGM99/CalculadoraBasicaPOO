@@ -136,15 +136,35 @@ public class CalculadoraBasica extends javax.swing.JFrame {
         getContentPane().add(suma, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 80, 49, 39));
 
         resta.setText("-");
+        resta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                restaActionPerformed(evt);
+            }
+        });
         getContentPane().add(resta, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 80, 49, 39));
 
         mul.setText("X");
+        mul.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mulActionPerformed(evt);
+            }
+        });
         getContentPane().add(mul, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 30, 49, 39));
 
         div.setText("/");
+        div.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                divActionPerformed(evt);
+            }
+        });
         getContentPane().add(div, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 130, 49, 39));
 
         resultado.setText("=");
+        resultado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resultadoActionPerformed(evt);
+            }
+        });
         getContentPane().add(resultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 80, 49, 39));
 
         Punto.setText(".");
@@ -188,6 +208,10 @@ public class CalculadoraBasica extends javax.swing.JFrame {
 
     private void sumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sumaActionPerformed
         // TODO add your handling code here:
+        if (Etiqueta3.getText().equals("")|(contador != 0)){
+            operaciones();
+            Etiqueta2.setText("+");
+        }
     }//GEN-LAST:event_sumaActionPerformed
 
     private void Num1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Num1ActionPerformed
@@ -258,9 +282,55 @@ public class CalculadoraBasica extends javax.swing.JFrame {
 
     private void BorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BorrarActionPerformed
         // TODO add your handling code here:
-        
+        numero1="";
+        numero2="";
+        Etiqueta1.setText("");
+        Etiqueta2.setText("");
+        Etiqueta3.setText("");
+        contador=0;
     }//GEN-LAST:event_BorrarActionPerformed
 
+    private void mulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mulActionPerformed
+        // TODO add your handling code here:
+        if (Etiqueta3.getText().equals("")|(contador != 0)){
+            operaciones();
+            Etiqueta2.setText("x");
+        }
+    }//GEN-LAST:event_mulActionPerformed
+
+    private void resultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resultadoActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_resultadoActionPerformed
+
+    private void restaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_restaActionPerformed
+        // TODO add your handling code here:
+        if (Etiqueta3.getText().equals("")|(contador != 0)){
+            operaciones();
+            Etiqueta2.setText("-");
+        }
+    }//GEN-LAST:event_restaActionPerformed
+
+    private void divActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divActionPerformed
+        // TODO add your handling code here:
+        if (Etiqueta3.getText().equals("")|(contador != 0)){
+            operaciones();
+            Etiqueta2.setText("/");
+        }
+    }//GEN-LAST:event_divActionPerformed
+    
+    void operaciones(){
+        double n1, n2;
+        if (!Etiqueta3.getText().equals("")){
+            if(contador == 0){
+                numero2 = numero1; 
+                Etiqueta2.setText(numero2);
+            }
+            if (numero2.equals("")){
+                numero2 = "0";
+            }
+        }
+    }
     /**
      * @param args the command line arguments
      */
