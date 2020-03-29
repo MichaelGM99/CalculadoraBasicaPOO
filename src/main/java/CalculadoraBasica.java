@@ -329,6 +329,13 @@ public class CalculadoraBasica extends javax.swing.JFrame {
             if (numero2.equals("")){
                 numero2 = "0";
             }
+            
+            n1 = Double.valueOf(numero2);
+            n2 = Double.valueOf(numero1);
+            
+            if (Etiqueta2.getText().equals(("-"))){
+                numero2 = String.valueOf(n1-n2);
+            }
         }
     }
     /**
