@@ -208,7 +208,7 @@ public class CalculadoraBasica extends javax.swing.JFrame {
 
     private void sumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sumaActionPerformed
         // TODO add your handling code here:
-        if (Etiqueta3.getText().equals("")|(contador != 0)){
+        if (!Etiqueta3.getText().equals("")|(contador != 0)){
             operaciones();
             Etiqueta2.setText("+");
         }
@@ -292,7 +292,7 @@ public class CalculadoraBasica extends javax.swing.JFrame {
 
     private void mulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mulActionPerformed
         // TODO add your handling code here:
-        if (Etiqueta3.getText().equals("")|(contador != 0)){
+        if (!Etiqueta3.getText().equals("")|(contador != 0)){
             operaciones();
             Etiqueta2.setText("x");
         }
@@ -305,7 +305,7 @@ public class CalculadoraBasica extends javax.swing.JFrame {
 
     private void restaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_restaActionPerformed
         // TODO add your handling code here:
-        if (Etiqueta3.getText().equals("")|(contador != 0)){
+        if (!Etiqueta3.getText().equals("")|(contador != 0)){
             operaciones();
             Etiqueta2.setText("-");
         }
@@ -313,7 +313,7 @@ public class CalculadoraBasica extends javax.swing.JFrame {
 
     private void divActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divActionPerformed
         // TODO add your handling code here:
-        if (Etiqueta3.getText().equals("")|(contador != 0)){
+        if (!Etiqueta3.getText().equals("")|(contador != 0)){
             operaciones();
             Etiqueta2.setText("/");
         }
@@ -336,6 +336,20 @@ public class CalculadoraBasica extends javax.swing.JFrame {
             if (Etiqueta2.getText().equals(("-"))){
                 numero2 = String.valueOf(n1-n2);
             }
+            if (Etiqueta2.getText().equals(("+"))){
+                numero2 = String.valueOf(n1+n2);
+            }
+            if (Etiqueta2.getText().equals(("*"))){
+                numero2 = String.valueOf(n1*n2);
+            }
+            if (Etiqueta2.getText().equals(("/"))){
+                numero2 = String.valueOf(n1/n2);
+            }
+            
+            Etiqueta3.setText("");
+            numero1 = "";
+            contador++;
+            Etiqueta1.setText(numero2);
         }
     }
     /**
