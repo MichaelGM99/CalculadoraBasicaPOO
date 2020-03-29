@@ -16,7 +16,11 @@ public class CalculadoraBasica extends javax.swing.JFrame {
     public CalculadoraBasica() {
         initComponents();
     }
-
+    
+    String numero1 = "";
+    String numero2 = "";
+    
+    int contador = 0;
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -26,21 +30,236 @@ public class CalculadoraBasica extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        Num3 = new javax.swing.JButton();
+        Num1 = new javax.swing.JButton();
+        Num2 = new javax.swing.JButton();
+        Num5 = new javax.swing.JButton();
+        Num4 = new javax.swing.JButton();
+        Num6 = new javax.swing.JButton();
+        Num7 = new javax.swing.JButton();
+        Num9 = new javax.swing.JButton();
+        Num8 = new javax.swing.JButton();
+        suma = new javax.swing.JButton();
+        resta = new javax.swing.JButton();
+        mul = new javax.swing.JButton();
+        div = new javax.swing.JButton();
+        resultado = new javax.swing.JButton();
+        Punto = new javax.swing.JButton();
+        Num0 = new javax.swing.JButton();
+        Borrar = new javax.swing.JButton();
+        Etiqueta3 = new javax.swing.JLabel();
+        Etiqueta1 = new javax.swing.JLabel();
+        Etiqueta2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Num3.setText("3");
+        Num3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Num3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Num3, new org.netbeans.lib.awtextra.AbsoluteConstraints(139, 33, 49, 39));
+
+        Num1.setText("1");
+        Num1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Num1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Num1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 35, 49, 39));
+
+        Num2.setText("2");
+        Num2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Num2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Num2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 33, 49, 39));
+
+        Num5.setText("5");
+        Num5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Num5ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Num5, new org.netbeans.lib.awtextra.AbsoluteConstraints(79, 83, 49, 39));
+
+        Num4.setText("4");
+        Num4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Num4ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Num4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 83, 49, 39));
+
+        Num6.setText("6");
+        Num6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Num6ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Num6, new org.netbeans.lib.awtextra.AbsoluteConstraints(138, 83, 49, 39));
+
+        Num7.setText("7");
+        Num7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Num7ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Num7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 128, 49, 39));
+
+        Num9.setText("9");
+        Num9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Num9ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Num9, new org.netbeans.lib.awtextra.AbsoluteConstraints(138, 128, 49, 39));
+
+        Num8.setText("8");
+        Num8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Num8ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Num8, new org.netbeans.lib.awtextra.AbsoluteConstraints(79, 128, 49, 39));
+
+        suma.setText("+");
+        suma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sumaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(suma, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 80, 49, 39));
+
+        resta.setText("-");
+        getContentPane().add(resta, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 80, 49, 39));
+
+        mul.setText("X");
+        getContentPane().add(mul, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 30, 49, 39));
+
+        div.setText("/");
+        getContentPane().add(div, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 130, 49, 39));
+
+        resultado.setText("=");
+        getContentPane().add(resultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 80, 49, 39));
+
+        Punto.setText(".");
+        Punto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PuntoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Punto, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 178, 49, 39));
+
+        Num0.setText("0");
+        Num0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Num0ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Num0, new org.netbeans.lib.awtextra.AbsoluteConstraints(79, 178, 49, 39));
+
+        Borrar.setText("C");
+        Borrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BorrarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Borrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(138, 178, 49, 39));
+
+        Etiqueta3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Etiqueta3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 130, 170, 30));
+
+        Etiqueta1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Etiqueta1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 50, 170, 30));
+
+        Etiqueta2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Etiqueta2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 90, 170, 30));
+
+        jLabel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 0, 190, 230));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void sumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sumaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sumaActionPerformed
+
+    private void Num1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Num1ActionPerformed
+        // TODO add your handling code here:
+        numero1 += "1";
+        Etiqueta3.setText(numero1);
+    }//GEN-LAST:event_Num1ActionPerformed
+
+    private void Num2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Num2ActionPerformed
+        // TODO add your handling code here:
+        numero1 += "2";
+        Etiqueta3.setText(numero1);
+    }//GEN-LAST:event_Num2ActionPerformed
+
+    private void Num3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Num3ActionPerformed
+        // TODO add your handling code here:
+        numero1 += "3";
+        Etiqueta3.setText(numero1);
+    }//GEN-LAST:event_Num3ActionPerformed
+
+    private void Num4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Num4ActionPerformed
+        // TODO add your handling code here:
+        numero1 += "4";
+        Etiqueta3.setText(numero1);
+    }//GEN-LAST:event_Num4ActionPerformed
+
+    private void Num5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Num5ActionPerformed
+        // TODO add your handling code here:
+        numero1 += "5";
+        Etiqueta3.setText(numero1);
+    }//GEN-LAST:event_Num5ActionPerformed
+
+    private void Num6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Num6ActionPerformed
+        // TODO add your handling code here:
+        numero1 += "6";
+        Etiqueta3.setText(numero1);
+    }//GEN-LAST:event_Num6ActionPerformed
+
+    private void Num7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Num7ActionPerformed
+        // TODO add your handling code here:
+        numero1 += "7";
+        Etiqueta3.setText(numero1);
+    }//GEN-LAST:event_Num7ActionPerformed
+
+    private void Num8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Num8ActionPerformed
+        // TODO add your handling code here:
+        numero1 += "8";
+        Etiqueta3.setText(numero1);
+    }//GEN-LAST:event_Num8ActionPerformed
+
+    private void Num9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Num9ActionPerformed
+        // TODO add your handling code here:
+        numero1 += "9";
+        Etiqueta3.setText(numero1);
+    }//GEN-LAST:event_Num9ActionPerformed
+
+    private void PuntoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PuntoActionPerformed
+        // TODO add your handling code here:
+        numero1 += ".";
+        Etiqueta3.setText(numero1);
+    }//GEN-LAST:event_PuntoActionPerformed
+
+    private void Num0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Num0ActionPerformed
+        // TODO add your handling code here:
+        numero1 += "0";
+        Etiqueta3.setText(numero1);
+    }//GEN-LAST:event_Num0ActionPerformed
+
+    private void BorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BorrarActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_BorrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +297,26 @@ public class CalculadoraBasica extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Borrar;
+    private javax.swing.JLabel Etiqueta1;
+    private javax.swing.JLabel Etiqueta2;
+    private javax.swing.JLabel Etiqueta3;
+    private javax.swing.JButton Num0;
+    private javax.swing.JButton Num1;
+    private javax.swing.JButton Num2;
+    private javax.swing.JButton Num3;
+    private javax.swing.JButton Num4;
+    private javax.swing.JButton Num5;
+    private javax.swing.JButton Num6;
+    private javax.swing.JButton Num7;
+    private javax.swing.JButton Num8;
+    private javax.swing.JButton Num9;
+    private javax.swing.JButton Punto;
+    private javax.swing.JButton div;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton mul;
+    private javax.swing.JButton resta;
+    private javax.swing.JButton resultado;
+    private javax.swing.JButton suma;
     // End of variables declaration//GEN-END:variables
 }
